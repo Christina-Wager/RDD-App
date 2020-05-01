@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2019
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Moving-Speakers-0.1 - Standalone Plugin", "Moving-Speakers-0.vcxproj", "{D76FC2BD-6178-34CC-7456-24551DE9EE2D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{18D5EBA7-A0F1-EB60-D9EB-4B03BF122161} = {18D5EBA7-A0F1-EB60-D9EB-4B03BF122161}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Moving-Speakers-0.1 - VST3", "Moving-Speakers-0.vcxproj", "{E94AC5FE-AE9E-EDA4-3BDC-B69CF87FF350}"
+	ProjectSection(ProjectDependencies) = postProject
+		{18D5EBA7-A0F1-EB60-D9EB-4B03BF122161} = {18D5EBA7-A0F1-EB60-D9EB-4B03BF122161}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Moving-Speakers-0.1 - Shared Code", "Moving-Speakers-0.vcxproj", "{18D5EBA7-A0F1-EB60-D9EB-4B03BF122161}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E94AC5FE-AE9E-EDA4-3BDC-B69CF87FF350}.Debug|x64.ActiveCfg = Debug|x64
+		{E94AC5FE-AE9E-EDA4-3BDC-B69CF87FF350}.Debug|x64.Build.0 = Debug|x64
+		{E94AC5FE-AE9E-EDA4-3BDC-B69CF87FF350}.Release|x64.ActiveCfg = Release|x64
+		{E94AC5FE-AE9E-EDA4-3BDC-B69CF87FF350}.Release|x64.Build.0 = Release|x64
+		{D76FC2BD-6178-34CC-7456-24551DE9EE2D}.Debug|x64.ActiveCfg = Debug|x64
+		{D76FC2BD-6178-34CC-7456-24551DE9EE2D}.Debug|x64.Build.0 = Debug|x64
+		{D76FC2BD-6178-34CC-7456-24551DE9EE2D}.Release|x64.ActiveCfg = Release|x64
+		{D76FC2BD-6178-34CC-7456-24551DE9EE2D}.Release|x64.Build.0 = Release|x64
+		{18D5EBA7-A0F1-EB60-D9EB-4B03BF122161}.Debug|x64.ActiveCfg = Debug|x64
+		{18D5EBA7-A0F1-EB60-D9EB-4B03BF122161}.Debug|x64.Build.0 = Debug|x64
+		{18D5EBA7-A0F1-EB60-D9EB-4B03BF122161}.Release|x64.ActiveCfg = Release|x64
+		{18D5EBA7-A0F1-EB60-D9EB-4B03BF122161}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

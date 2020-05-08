@@ -9,6 +9,9 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "LogComponent.h"
+#include "TabsComponent.h"
+#include "MidiSettings.h"
 
 //==============================================================================
 /*
@@ -30,6 +33,10 @@ private:
     //==============================================================================
     // Your private member variables go here...
 
+    LogComponent	_logComponent;
+    TabsComponent	_tabsComponent;
+	rdd::MidiSettings	_midiSettings;
+    
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

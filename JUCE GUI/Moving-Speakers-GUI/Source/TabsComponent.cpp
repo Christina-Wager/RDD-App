@@ -17,21 +17,12 @@
   ==============================================================================
 */
 
-//[Headers] You can add your own extra header files here...
-//[/Headers]
 
 #include "TabsComponent.h"
-
-
-//[MiscUserDefs] You can add your own user definitions and misc code here...
-//[/MiscUserDefs]
 
 //==============================================================================
 TabsComponent::TabsComponent ()
 {
-    //[Constructor_pre] You can add your own custom stuff here..
-    //[/Constructor_pre]
-
     tabbedComponent.reset (new TabbedComponent (TabbedButtonBar::TabsAtTop));
     addAndMakeVisible (tabbedComponent.get());
     tabbedComponent->setTabBarDepth (30);
@@ -40,56 +31,27 @@ TabsComponent::TabsComponent ()
     tabbedComponent->addTab (TRANS("Settings"), Colours::lightgrey, 0, false);
     tabbedComponent->setCurrentTabIndex (0);
 
-
-    //[UserPreSize]
-
 	Colour tabColor = getLookAndFeel().findColour(ResizableWindow::backgroundColourId);
 
 	tabbedComponent->setTabBackgroundColour(0, tabColor);
 	tabbedComponent->setTabBackgroundColour(1, tabColor);
 	tabbedComponent->setTabBackgroundColour(2, tabColor);
-
-    //[/UserPreSize]
-
-    setSize (600, 400);
-
-
-    //[Constructor] You can add your own custom stuff here..
-    //[/Constructor]
 }
 
 TabsComponent::~TabsComponent()
 {
-    //[Destructor_pre]. You can add your own custom destruction code here..
-    //[/Destructor_pre]
-
     tabbedComponent = nullptr;
-
-
-    //[Destructor]. You can add your own custom destruction code here..
-    //[/Destructor]
 }
 
 //==============================================================================
 void TabsComponent::paint (Graphics& g)
 {
-    //[UserPrePaint] Add your own custom painting code here..
-    //[/UserPrePaint]
-
     g.fillAll (Colour (0xff323e44));
-
-    //[UserPaint] Add your own custom painting code here..
-    //[/UserPaint]
 }
 
 void TabsComponent::resized()
 {
-    //[UserPreResize] Add your own custom resize code here..
-    //[/UserPreResize]
-
     tabbedComponent->setBounds (0, 0, proportionOfWidth (1.0000f), proportionOfHeight (1.0000f));
-    //[UserResized] Add your own custom resize handling here..
-    //[/UserResized]
 }
 
 

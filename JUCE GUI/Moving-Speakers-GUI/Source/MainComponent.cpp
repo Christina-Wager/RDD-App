@@ -11,7 +11,7 @@
 //==============================================================================
 MainComponent::MainComponent()
 {
-    setSize (600, 400);
+    setSize (800, 600);
 
 	Logger::setCurrentLogger(&_logComponent);
 
@@ -24,7 +24,7 @@ MainComponent::MainComponent()
 	else {
 
 		AlertWindow::showMessageBox(AlertWindow::WarningIcon, "Error", "Failed to load MIDI settings from file 'midiconfig.json'", "Quit", this);
-	
+
 		JUCEApplication::getInstance()->systemRequestedQuit();
 	}
 }
@@ -37,33 +37,23 @@ MainComponent::~MainComponent()
 //==============================================================================
 void MainComponent::paint (Graphics& g)
 {
-    // (Our component is opaque, so we must completely fill the background with a solid colour)
     g.fillAll (getLookAndFeel().findColour (ResizableWindow::backgroundColourId));
 
-    //g.setFont (Font (16.0f));
-    //g.setColour (Colours::white);
-    //g.drawText ("Hello World!", getLocalBounds(), Justification::centred, true);
-    
-    
 	addAndMakeVisible(_logComponent);
 	addAndMakeVisible(_tabsComponent);
+	addAndMakeVisible(_gridComponent);
 }
 
 void MainComponent::resized()
 {
-    // This is called when the MainComponent is resized.
-    // If you add any child components, this is where you should
-    // update their positions.
-    
-    FlexBox fb;
-	fb.flexDirection = FlexBox::Direction::column;
-	fb.flexWrap = FlexBox::Wrap::noWrap;
-	fb.justifyContent = FlexBox::JustifyContent::center;
-	fb.alignContent = FlexBox::AlignContent::stretch;
-	fb.alignItems = FlexBox::AlignItems::stretch;
+	Grid grid;
+	using Track = Grid::TrackInfo;
 
-	fb.items.add(FlexItem(600, 300, _tabsComponent).withFlex(0.9f, 1.1f, 1.0f));
-	fb.items.add(FlexItem(600, 100, _logComponent));
-	
-	fb.performLayout(getLocalBounds().toFloat());
+	//_tabsComponent.setSize(getWidth(), 30);
+
+	grid.templateRows = {Track(30_px), Track(3_fr), Track(1_fr)};
+	grid.templateColumns = {Track(1_fr)};
+	grid.items = {GridItem(_tabsComponent), GridItem(_gridComponent), GridItem(_logComponent)};
+	grid.performLayout(getLocalBounds());
+
 }

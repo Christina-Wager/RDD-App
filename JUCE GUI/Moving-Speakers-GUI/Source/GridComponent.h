@@ -13,13 +13,15 @@ public:
 
     GridComponent()
     {
-        setSize (800,600); //default max size of overall window
+        //setSize (800,600); //default max size of overall window
     }
 
     void paint (Graphics& g) override
     {
-        g.fillAll(Colour(56,56,56));
+        //The frame
+        g.fillAll (Colour (0xff323e44));
 
+        //for testing the grid bounds, will delete or repaint later
         g.setColour(Colour(84,84,84));
         g.fillRect(getLocalBounds().reduced(15,15)); //The working window inside of the window
 
@@ -33,7 +35,8 @@ public:
         using Track = Grid::TrackInfo;
 
         // Rows for header (navbar), 4 for the panel items, and footer (message log)
-        grid.templateRows   = { Track(40_px), Track (1_fr), Track(1_fr), Track(1_fr), Track(1_fr), Track(90_px)};
+        //if use navbar in grid: height 40px; for logger: 90_px
+        grid.templateRows   = { Track (1_fr), Track(1_fr), Track(1_fr), Track(1_fr)};
 
         // 4 columns for the overall grid
         grid.templateColumns = { Track(1_fr), Track(1_fr), Track(1_fr), Track(1_fr)};
@@ -47,23 +50,15 @@ public:
         grid.autoFlow = (window.getHeight() > window.getWidth()) ? Grid::AutoFlow::rowDense
                                                              : Grid::AutoFlow::columnDense;
 
+        //grid.items = {GridItem //panel items will be passed and filled into the grid
 
-        //grid.performLayout(getLocalBounds().reduced(15,15));
+        grid.performLayout(window);
     }
-
-    //void fillGrid(FlexBox panels[])
-    //{
-    //        grid.items.addArray (panels)
-    //        grid.performLayout{getLocalBounds().reduced(15,15};
-    //}
 
      //==============================================================================
 
 private:
-
     FlexBox gridItems[16]; //maximum number of permissible panels
-    FlexBox naviBar; //navigation bar at the top
-    FlexBox logger; //message log at the bottom
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (GridComponent)
 };

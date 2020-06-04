@@ -41,13 +41,10 @@ public:
     ~LogComponent() override;
 
     //==============================================================================
-    //[UserMethods]     -- You can add your own custom methods in this section.
-
 
     void logMessage(const String& m);
 
 
-    //[/UserMethods]
 
     void paint (Graphics& g) override;
     void resized() override;

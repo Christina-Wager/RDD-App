@@ -12,6 +12,7 @@
 #include "LogComponent.h"
 #include "TabsComponent.h"
 #include "MidiSettings.h"
+#include "GridComponent.h"
 
 //==============================================================================
 /*
@@ -31,12 +32,12 @@ public:
 
 private:
     //==============================================================================
-    // Your private member variables go here...
 
     LogComponent	_logComponent;
     TabsComponent	_tabsComponent;
+    GridComponent   _gridComponent;
 	rdd::MidiSettings	_midiSettings;
-    
+
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

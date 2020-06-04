@@ -156,13 +156,6 @@
 			path = "../../JuceLibraryCode/include_juce_gui_basics.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
-		0E86428221603729534360D7 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = GridComponent.h;
-			path = ../../Source/GridComponent.h;
-			sourceTree = "SOURCE_ROOT";
-		};
 		1053B1E8738E20BE4A3CE984 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
@@ -500,7 +493,6 @@
 			isa = PBXGroup;
 			children = (
 				FBDCC223588577F76D6C6D6B,
-				0E86428221603729534360D7,
 			);
 			name = "Moving-Speakers-GUI";
 			sourceTree = "<group>";

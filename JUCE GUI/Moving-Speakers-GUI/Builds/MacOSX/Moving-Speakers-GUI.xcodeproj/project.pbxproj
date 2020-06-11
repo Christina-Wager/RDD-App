@@ -57,6 +57,14 @@
 			isa = PBXBuildFile;
 			fileRef = 46DCCB314BC2032C49C6223A;
 		};
+		9B8912E4E352EB0FCDEA0223 = {
+			isa = PBXBuildFile;
+			fileRef = B643D57236B194D62EB1CE41;
+		};
+		7A214010D3E9B74137300067 = {
+			isa = PBXBuildFile;
+			fileRef = 7B40257CA468C4B45C9C4CEC;
+		};
 		8556483C53993F8E4D114B7C = {
 			isa = PBXBuildFile;
 			fileRef = A877BE9D824FCDCD87F73630;
@@ -154,6 +162,13 @@
 			lastKnownFileType = sourcecode.cpp.objcpp;
 			name = "include_juce_gui_basics.mm";
 			path = "../../JuceLibraryCode/include_juce_gui_basics.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		0E86428221603729534360D7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = GridComponent.h;
+			path = ../../Source/GridComponent.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		1053B1E8738E20BE4A3CE984 = {
@@ -254,6 +269,13 @@
 			path = System/Library/Frameworks/Cocoa.framework;
 			sourceTree = SDKROOT;
 		};
+		50D72C3C8DBD162415AD4E2A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = FilePanel.h;
+			path = ../../Source/FilePanel.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		5DFF8C2FB56583B3FA5AB249 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
@@ -294,6 +316,13 @@
 			lastKnownFileType = file.nib;
 			name = RecentFilesMenuTemplate.nib;
 			path = RecentFilesMenuTemplate.nib;
+			sourceTree = "SOURCE_ROOT";
+		};
+		7B40257CA468C4B45C9C4CEC = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = GridComponent.cpp;
+			path = ../../Source/GridComponent.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		836B84F14E3853B348B50A65 = {
@@ -357,6 +386,13 @@
 			lastKnownFileType = text.plist.xml;
 			name = "Info-App.plist";
 			path = "Info-App.plist";
+			sourceTree = "SOURCE_ROOT";
+		};
+		B643D57236B194D62EB1CE41 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = FilePanel.cpp;
+			path = ../../Source/FilePanel.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		B7F2238ECB262463A258393B = {
@@ -466,9 +502,21 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		D0D27BFC24008A167A76C55D = {
+			isa = PBXGroup;
+			children = (
+				B643D57236B194D62EB1CE41,
+				50D72C3C8DBD162415AD4E2A,
+			);
+			name = "Manual Control";
+			sourceTree = "<group>";
+		};
 		575316CD94483BF62C601C15 = {
 			isa = PBXGroup;
 			children = (
+				D0D27BFC24008A167A76C55D,
+				7B40257CA468C4B45C9C4CEC,
+				0E86428221603729534360D7,
 				A877BE9D824FCDCD87F73630,
 				2A2A69B010BD26BE80011DBD,
 				29CEF5621526457DAF46BC90,
@@ -801,6 +849,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2293CC75845D2CCE50C676B8,
+				9B8912E4E352EB0FCDEA0223,
+				7A214010D3E9B74137300067,
 				8556483C53993F8E4D114B7C,
 				A47C170CA784302913361357,
 				C70EAC7317EB6FA4535A8B93,

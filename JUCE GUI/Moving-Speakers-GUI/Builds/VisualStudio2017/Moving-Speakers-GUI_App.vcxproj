@@ -139,6 +139,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\MidiSettings.cpp"/>
+    <ClCompile Include="..\..\Source\FilePanel.cpp"/>
+    <ClCompile Include="..\..\Source\GridComponent.cpp"/>
     <ClCompile Include="..\..\Source\TabsComponent.cpp"/>
     <ClCompile Include="..\..\Source\LogComponent.cpp"/>
     <ClCompile Include="..\..\Source\MainComponent.cpp"/>
@@ -1862,6 +1864,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\MidiSettings.h"/>
+    <ClInclude Include="..\..\Source\FilePanel.h"/>
+    <ClInclude Include="..\..\Source\GridComponent.h"/>
     <ClInclude Include="..\..\Source\TabsComponent.h"/>
     <ClInclude Include="..\..\Source\LogComponent.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>

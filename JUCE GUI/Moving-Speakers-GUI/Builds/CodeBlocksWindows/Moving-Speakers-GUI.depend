@@ -4528,10 +4528,10 @@
 
 1581348478 e:\juce-5.4.7-windows\juce\modules\juce_opengl\utils\juce_openglappcomponent.cpp
 
-1591302284 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\logcomponent.cpp
+1591615944 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\logcomponent.cpp
 	"LogComponent.h"
 
-1591302253 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\logcomponent.h
+1591615895 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\logcomponent.h
 	"../JuceLibraryCode/JuceHeader.h"
 
 1591276436 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\jucelibrarycode\juceheader.h
@@ -4549,17 +4549,17 @@
 	<juce_gui_extra/juce_gui_extra.h>
 	<juce_opengl/juce_opengl.h>
 
-1591303436 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\maincomponent.cpp
+1591640061 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\maincomponent.cpp
 	"MainComponent.h"
 
-1591279465 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\maincomponent.h
+1591638298 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\maincomponent.h
 	<JuceHeader.h>
 	"LogComponent.h"
 	"TabsComponent.h"
 	"MidiSettings.h"
 	"GridComponent.h"
 
-1591276436 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\tabscomponent.h
+1591638298 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\tabscomponent.h
 	"../JuceLibraryCode/JuceHeader.h"
 
 1591105819 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\midisettings.h
@@ -4568,15 +4568,32 @@
 1591105819 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\midisettings.cpp
 	"MidiSettings.h"
 
-1591302322 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\tabscomponent.cpp
+1591638298 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\tabscomponent.cpp
 	"TabsComponent.h"
 
 1591106693 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\builds\codeblockswindows\resources.rc
 	<windows.h>
 
-1591278200 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\main.cpp
+1591640052 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\main.cpp
 	<JuceHeader.h>
 	"MainComponent.h"
 
-1591303930 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\gridcomponent.h
+1591638927 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\gridcomponent.h
+	"../JuceLibraryCode/JuceHeader.h"
+	"FilePanel.h"
+
+1591639784 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\gridcomponent.cpp
+	"GridComponent.h"
+
+1591623692 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\manualcontrol.cpp
+
+1591638154 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\manualcontrol.h
+	<JuceHeader.h>
+	"GridComponent.h"
+
+1591639558 e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\filepanel.h
+	<JuceHeader.h>
+
+1591639961 source:e:\juce-5.4.7-windows\rdd-app\juce gui\moving-speakers-gui\source\filepanel.cpp
+	"FilePanel.h"
 

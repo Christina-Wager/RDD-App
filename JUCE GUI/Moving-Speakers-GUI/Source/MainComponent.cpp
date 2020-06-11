@@ -1,9 +1,7 @@
 /*
-  ==============================================================================
-
-    This file was auto-generated!
-
-  ==============================================================================
+    This component represents the main window and combines the navigation bar (Tabscomponent), logging window  (LogComponent) and
+    the current sub-window depicted in the GridComponent.
+    The sub-window is repainted depending on the current tab chosen in the navigation bar.
 */
 
 #include "MainComponent.h"
@@ -11,7 +9,7 @@
 //==============================================================================
 MainComponent::MainComponent()
 {
-    setSize (800, 600);
+    setSize (1000, 800);
 
 	Logger::setCurrentLogger(&_logComponent);
 
@@ -48,8 +46,6 @@ void MainComponent::resized()
 {
 	Grid grid;
 	using Track = Grid::TrackInfo;
-
-	//_tabsComponent.setSize(getWidth(), 30);
 
 	grid.templateRows = {Track(30_px), Track(3_fr), Track(1_fr)};
 	grid.templateColumns = {Track(1_fr)};

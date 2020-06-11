@@ -1,10 +1,3 @@
-/*
-  ==============================================================================
-
-    This file was auto-generated!
-
-  ==============================================================================
-*/
 
 #pragma once
 
@@ -14,11 +7,6 @@
 #include "MidiSettings.h"
 #include "GridComponent.h"
 
-//==============================================================================
-/*
-    This component lives inside our window, and this is where you should put all
-    your controls and content.
-*/
 class MainComponent   : public Component
 {
 public:

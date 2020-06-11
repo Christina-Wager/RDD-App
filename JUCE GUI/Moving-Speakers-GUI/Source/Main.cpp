@@ -1,12 +1,3 @@
-/*
-  ==============================================================================
-
-    This file was auto-generated!
-
-    It contains the basic startup code for a JUCE application.
-
-  ==============================================================================
-*/
 
 #include <JuceHeader.h>
 #include "MainComponent.h"
@@ -20,7 +11,6 @@ public:
 
     const String getApplicationName() override       { return "RDD App"; }
     const String getApplicationVersion() override    { return ProjectInfo::versionString; }
-    //bool moreThanOneInstanceAllowed() override       { return true; }
 
     //==============================================================================
     void initialise (const String& commandLine) override { mainWindow.reset (new MainWindow ("RDD App"));}
@@ -41,7 +31,7 @@ public:
             setContentOwned (new MainComponent(), true);
 
             setResizable (true, false);
-            setResizeLimits(500, 300, 800, 600);
+            setResizeLimits(500, 300, 1000, 800);
             centreWithSize (getWidth(), getHeight());
 
             setVisible (true);

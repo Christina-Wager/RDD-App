@@ -5,6 +5,9 @@
     <Filter Include="Moving-Speakers-GUI\Source\Util">
       <UniqueIdentifier>{AC7ED1AC-E8F5-AE81-6D87-D2268277F0D3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Moving-Speakers-GUI\Source\Ui\Manual Control">
+      <UniqueIdentifier>{E4ABE5DA-41B4-81DF-A6C5-93445A1D39E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Moving-Speakers-GUI\Source\Ui">
       <UniqueIdentifier>{B639CC94-A9E9-3DB3-EC3D-905FD130C6A6}</UniqueIdentifier>
     </Filter>
@@ -405,6 +408,12 @@
   <ItemGroup>
     <ClCompile Include="..\..\Source\MidiSettings.cpp">
       <Filter>Moving-Speakers-GUI\Source\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FilePanel.cpp">
+      <Filter>Moving-Speakers-GUI\Source\Ui\Manual Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GridComponent.cpp">
+      <Filter>Moving-Speakers-GUI\Source\Ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\TabsComponent.cpp">
       <Filter>Moving-Speakers-GUI\Source\Ui</Filter>
@@ -2264,6 +2273,12 @@
   <ItemGroup>
     <ClInclude Include="..\..\Source\MidiSettings.h">
       <Filter>Moving-Speakers-GUI\Source\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FilePanel.h">
+      <Filter>Moving-Speakers-GUI\Source\Ui\Manual Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GridComponent.h">
+      <Filter>Moving-Speakers-GUI\Source\Ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\TabsComponent.h">
       <Filter>Moving-Speakers-GUI\Source\Ui</Filter>

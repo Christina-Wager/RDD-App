@@ -20,7 +20,8 @@
 #pragma once
 
 //[Headers]     -- You can add your own extra header files here --
-#include "../JuceLibraryCode/JuceHeader.h"
+#include <JuceHeader.h>
+#include <set>
 //[/Headers]
 
 
@@ -33,15 +34,20 @@
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
-class TabsComponent  : public Component
+class MidiOutputDeviceSelectorComponent  : public Component,
+                                           public ChangeListener
 {
 public:
     //==============================================================================
-    TabsComponent ();
-    ~TabsComponent() override;
+    MidiOutputDeviceSelectorComponent ();
+    ~MidiOutputDeviceSelectorComponent() override;
 
     //==============================================================================
-    //[UserMethods]     -- You can add your own custom methods in this section.
+    //[UserMethods]     -- You can add your own custom methods in this section.    
+	void refreshDeviceList();
+	void onDeviceButtonToggled(String identifier);
+	void changeListenerCallback(ChangeBroadcaster* source) override;
+	const std::set<String>& getSelectedDeviceIdentifiers();
     //[/UserMethods]
 
     void paint (Graphics& g) override;
@@ -50,15 +56,18 @@ public:
 
 
 private:
-    //[UserVariables]   -- You can add your own custom variables in this section.
+    //[UserVariables]   -- You can add your own custom variables in this section.	
+	AudioDeviceManager _deviceManager;
+	std::set<String> _selectedDeviceIdentifiers;
+	std::map<String, ToggleButton*> _buttons;
+	Label _label{ {}, "Select MIDI output device(s)" };
     //[/UserVariables]
 
     //==============================================================================
-    std::unique_ptr<TabbedComponent> tabbedComponent;
 
 
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (TabsComponent)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MidiOutputDeviceSelectorComponent)
 };
 
 //[EndFile] You can add extra defines here...

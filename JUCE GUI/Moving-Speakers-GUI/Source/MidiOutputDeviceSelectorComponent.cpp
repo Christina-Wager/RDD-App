@@ -30,19 +30,18 @@
 MidiOutputDeviceSelectorComponent::MidiOutputDeviceSelectorComponent ()
 {
     //[Constructor_pre] You can add your own custom stuff here..
-	_deviceManager.addChangeListener(this);
 	refreshDeviceList();
 
-	//[/Constructor_pre]
+    //[/Constructor_pre]
 
 
-	//[UserPreSize]
-	//[/UserPreSize]
+    //[UserPreSize]
+    //[/UserPreSize]
 
-	setSize(300, 200);
+    setSize (300, 200);
 
 
-	//[Constructor] You can add your own custom stuff here..
+    //[Constructor] You can add your own custom stuff here..
 	setSize(300, 20 + (1 + _buttons.size()) * 30);
     //[/Constructor]
 }
@@ -67,6 +66,8 @@ void MidiOutputDeviceSelectorComponent::paint (Graphics& g)
     g.fillAll (Colour (0xff323e44));
 
     //[UserPaint] Add your own custom painting code here..
+	addAndMakeVisible(_label);
+
     //[/UserPaint]
 }
 
@@ -139,12 +140,10 @@ void MidiOutputDeviceSelectorComponent::onDeviceButtonToggled(String identifier)
 			_selectedDeviceIdentifiers.erase(identifier);
 		}
 	}
+
+	sendChangeMessage();
 }
 
-
-void MidiOutputDeviceSelectorComponent::changeListenerCallback(ChangeBroadcaster* source) {
-	refreshDeviceList();
-}
 
 const std::set<String>& MidiOutputDeviceSelectorComponent::getSelectedDeviceIdentifiers() {
 	return _selectedDeviceIdentifiers;
@@ -162,7 +161,7 @@ const std::set<String>& MidiOutputDeviceSelectorComponent::getSelectedDeviceIden
 BEGIN_JUCER_METADATA
 
 <JUCER_COMPONENT documentType="Component" className="MidiOutputDeviceSelectorComponent"
-                 componentName="" parentClasses="public Component, public ChangeListener"
+                 componentName="" parentClasses="public Component, public ChangeBroadcaster"
                  constructorParams="" variableInitialisers="" snapPixels="8" snapActive="1"
                  snapShown="1" overlayOpacity="0.330" fixedSize="0" initialWidth="300"
                  initialHeight="200">

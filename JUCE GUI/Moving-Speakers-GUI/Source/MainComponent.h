@@ -12,6 +12,9 @@
 #include "LogComponent.h"
 #include "TabsComponent.h"
 #include "MidiSettings.h"
+#include "MidiController.h"
+#include "MidiInputDeviceSelectorComponent.h"
+#include "MidiOutputDeviceSelectorComponent.h"
 
 //==============================================================================
 /*
@@ -36,7 +39,10 @@ private:
     LogComponent	_logComponent;
     TabsComponent	_tabsComponent;
 	rdd::MidiSettings	_midiSettings;
-    
+	rdd::MidiController* _midiController;
+
+	MidiInputDeviceSelectorComponent _midiInputComponent;
+	MidiOutputDeviceSelectorComponent _midiOutputComponent;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

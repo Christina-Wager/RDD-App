@@ -35,7 +35,7 @@
                                                                     //[/Comments]
 */
 class MidiInputDeviceSelectorComponent  : public Component,
-                                          public ChangeListener
+                                          public ChangeBroadcaster
 {
 public:
     //==============================================================================
@@ -46,7 +46,6 @@ public:
     //[UserMethods]     -- You can add your own custom methods in this section.
     void refreshDeviceList();
 	void onDeviceButtonToggled(String identifier);
-	void changeListenerCallback(ChangeBroadcaster* source) override;
 	const std::set<String>& getSelectedDeviceIdentifiers();
     //[/UserMethods]
 

@@ -46,21 +46,6 @@ bool MidiSettings::load(const File& file) {
 }
 
 
-int MidiSettings::getChannel() {
-	return _channel;
-}
-
-
-int MidiSettings::getNote(BotCommand cmd) {
-	return _notes.find(cmd)->second;
-}
-
-
-int MidiSettings::getCC(BotParameter param) {
-	return _cc.find(param)->second;
-}
-
-
 String MidiSettings::toString() {
 	String s = "MidiSettings:\n";
 	s += " channel:            " + String(_channel) + "\n";

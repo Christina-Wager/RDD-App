@@ -35,7 +35,7 @@
                                                                     //[/Comments]
 */
 class MidiOutputDeviceSelectorComponent  : public Component,
-                                           public ChangeListener
+                                           public ChangeBroadcaster
 {
 public:
     //==============================================================================
@@ -43,10 +43,9 @@ public:
     ~MidiOutputDeviceSelectorComponent() override;
 
     //==============================================================================
-    //[UserMethods]     -- You can add your own custom methods in this section.    
+    //[UserMethods]     -- You can add your own custom methods in this section.
 	void refreshDeviceList();
 	void onDeviceButtonToggled(String identifier);
-	void changeListenerCallback(ChangeBroadcaster* source) override;
 	const std::set<String>& getSelectedDeviceIdentifiers();
     //[/UserMethods]
 
@@ -56,7 +55,7 @@ public:
 
 
 private:
-    //[UserVariables]   -- You can add your own custom variables in this section.	
+    //[UserVariables]   -- You can add your own custom variables in this section.
 	AudioDeviceManager _deviceManager;
 	std::set<String> _selectedDeviceIdentifiers;
 	std::map<String, ToggleButton*> _buttons;

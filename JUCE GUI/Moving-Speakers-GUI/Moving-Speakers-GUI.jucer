@@ -10,12 +10,26 @@
       </GROUP>
       <GROUP id="{62FA6BFF-8C52-5DAF-61DD-2143AA85F673}" name="Ui">
         <GROUP id="{78DAA800-59EE-D780-6309-B31DCB8D7DD8}" name="Manual Control">
-          <FILE id="qgU5GT" name="FilePanel.cpp" compile="1" resource="0" file="Source/FilePanel.cpp"/>
-          <FILE id="RFJaj8" name="FilePanel.h" compile="0" resource="0" file="Source/FilePanel.h"/>
+          <FILE id="VzWyiN" name="MapComponent.cpp" compile="1" resource="0"
+                file="Source/MapComponent.cpp"/>
+          <FILE id="IuzkuZ" name="MapComponent.h" compile="0" resource="0" file="Source/MapComponent.h"/>
+          <FILE id="i1Pz3j" name="RotationButtons.cpp" compile="1" resource="0"
+                file="Source/RotationButtons.cpp"/>
+          <FILE id="eemEbS" name="RotationButtons.h" compile="0" resource="0"
+                file="Source/RotationButtons.h"/>
+          <FILE id="PPPa6c" name="GridComponent.cpp" compile="1" resource="0"
+                file="Source/GridComponent.cpp"/>
+          <FILE id="OP0bKf" name="GridComponent.h" compile="0" resource="0" file="Source/GridComponent.h"/>
+          <FILE id="qgU5GT" name="FileButtons.cpp" compile="1" resource="0" file="Source/FileButtons.cpp"/>
+          <FILE id="RFJaj8" name="FileButtons.h" compile="0" resource="0" file="Source/FileButtons.h"/>
+          <FILE id="fm1PSh" name="ManualControl.cpp" compile="1" resource="0"
+                file="Source/ManualControl.cpp"/>
+          <FILE id="RsJlrA" name="ManualControl.h" compile="0" resource="0" file="Source/ManualControl.h"/>
+          <FILE id="HIsshX" name="PathButtons.cpp" compile="1" resource="0" file="Source/PathButtons.cpp"/>
+          <FILE id="BCkUQd" name="PathButtons.h" compile="0" resource="0" file="Source/PathButtons.h"/>
+          <FILE id="AxRMk6" name="Sequencer.cpp" compile="1" resource="0" file="Source/Sequencer.cpp"/>
+          <FILE id="JDNLrU" name="Sequencer.h" compile="0" resource="0" file="Source/Sequencer.h"/>
         </GROUP>
-        <FILE id="PPPa6c" name="GridComponent.cpp" compile="1" resource="0"
-              file="Source/GridComponent.cpp"/>
-        <FILE id="OP0bKf" name="GridComponent.h" compile="0" resource="0" file="Source/GridComponent.h"/>
         <FILE id="JKBL70" name="TabsComponent.cpp" compile="1" resource="0"
               file="Source/TabsComponent.cpp"/>
         <FILE id="en5AGm" name="TabsComponent.h" compile="0" resource="0" file="Source/TabsComponent.h"/>
@@ -90,6 +104,26 @@
         <MODULEPATH id="juce_audio_basics"/>
       </MODULEPATHS>
     </XCODE_MAC>
+    <CODEBLOCKS_WINDOWS targetFolder="Builds/CodeBlocksWindows" extraCompilerFlags="-Wa,-mbig-obj">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_opengl"/>
+        <MODULEPATH id="juce_gui_extra"/>
+        <MODULEPATH id="juce_gui_basics"/>
+        <MODULEPATH id="juce_graphics"/>
+        <MODULEPATH id="juce_events"/>
+        <MODULEPATH id="juce_data_structures"/>
+        <MODULEPATH id="juce_cryptography"/>
+        <MODULEPATH id="juce_core"/>
+        <MODULEPATH id="juce_audio_processors"/>
+        <MODULEPATH id="juce_audio_formats"/>
+        <MODULEPATH id="juce_audio_devices"/>
+        <MODULEPATH id="juce_audio_basics"/>
+      </MODULEPATHS>
+    </CODEBLOCKS_WINDOWS>
   </EXPORTFORMATS>
   <MODULES>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>

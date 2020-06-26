@@ -5,7 +5,7 @@
 #include "LogComponent.h"
 #include "TabsComponent.h"
 #include "MidiSettings.h"
-#include "GridComponent.h"
+#include "ManualControl.h"
 
 class MainComponent   : public Component
 {
@@ -23,7 +23,7 @@ private:
 
     LogComponent	_logComponent;
     TabsComponent	_tabsComponent;
-    GridComponent   _gridComponent;
+    ManualControl   _manualControl;
 	rdd::MidiSettings	_midiSettings;
 
 

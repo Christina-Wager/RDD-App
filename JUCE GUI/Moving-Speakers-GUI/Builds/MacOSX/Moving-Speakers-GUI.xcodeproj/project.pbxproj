@@ -57,13 +57,33 @@
 			isa = PBXBuildFile;
 			fileRef = 46DCCB314BC2032C49C6223A;
 		};
-		9B8912E4E352EB0FCDEA0223 = {
+		7812C145BE1EBCE39150219B = {
 			isa = PBXBuildFile;
-			fileRef = B643D57236B194D62EB1CE41;
+			fileRef = F0B3EDF75E2D672E4625068C;
+		};
+		333038F184220F9EDFA461DA = {
+			isa = PBXBuildFile;
+			fileRef = 1C4012DF762541C653403A34;
 		};
 		7A214010D3E9B74137300067 = {
 			isa = PBXBuildFile;
 			fileRef = 7B40257CA468C4B45C9C4CEC;
+		};
+		AD0742E2ECD37CCB26FA500E = {
+			isa = PBXBuildFile;
+			fileRef = CC5BA1B1A3AE3E5EA9AAFCAB;
+		};
+		5D386FF45A3A53BA65C2F1DC = {
+			isa = PBXBuildFile;
+			fileRef = 5EDD04D890E00364AB0BBC0C;
+		};
+		E75FCD7695B083EE84983E69 = {
+			isa = PBXBuildFile;
+			fileRef = DEB02C73EEB55A0E32154885;
+		};
+		90DC302E15B4E54B629AC855 = {
+			isa = PBXBuildFile;
+			fileRef = 39F83D41D93CCD15A14AE9A6;
 		};
 		8556483C53993F8E4D114B7C = {
 			isa = PBXBuildFile;
@@ -157,6 +177,13 @@
 			path = ../../JuceLibraryCode/AppConfig.h;
 			sourceTree = "SOURCE_ROOT";
 		};
+		0D0BAD9EBE261685A83A0E6E = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = FileButtons.h;
+			path = ../../Source/FileButtons.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		0D2E4168D9C8BFD480F64985 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
@@ -184,6 +211,13 @@
 			name = "juce_graphics";
 			path = "~/JUCE/modules/juce_graphics";
 			sourceTree = "<absolute>";
+		};
+		1C4012DF762541C653403A34 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = RotationButtons.cpp;
+			path = ../../Source/RotationButtons.cpp;
+			sourceTree = "SOURCE_ROOT";
 		};
 		26C287747CED5B9C7A6F56AE = {
 			isa = PBXFileReference;
@@ -234,6 +268,13 @@
 			path = "~/JUCE/modules/juce_gui_basics";
 			sourceTree = "<absolute>";
 		};
+		39F83D41D93CCD15A14AE9A6 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Sequencer.cpp;
+			path = ../../Source/Sequencer.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
 		46DCCB314BC2032C49C6223A = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -269,11 +310,11 @@
 			path = System/Library/Frameworks/Cocoa.framework;
 			sourceTree = SDKROOT;
 		};
-		50D72C3C8DBD162415AD4E2A = {
+		58D6877BE2B1035C9C864C7E = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
-			name = FilePanel.h;
-			path = ../../Source/FilePanel.h;
+			name = MapComponent.h;
+			path = ../../Source/MapComponent.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		5DFF8C2FB56583B3FA5AB249 = {
@@ -281,6 +322,13 @@
 			lastKnownFileType = sourcecode.cpp.objcpp;
 			name = "include_juce_audio_formats.mm";
 			path = "../../JuceLibraryCode/include_juce_audio_formats.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		5EDD04D890E00364AB0BBC0C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = ManualControl.cpp;
+			path = ../../Source/ManualControl.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		5EDEA9DDAAEAC1C671C43931 = {
@@ -381,18 +429,18 @@
 			path = ../../Source/MidiSettings.h;
 			sourceTree = "SOURCE_ROOT";
 		};
+		AB2E0BC07B2D90897E98F8E4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = Sequencer.h;
+			path = ../../Source/Sequencer.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		B1D22D0602303BD36D7E15C8 = {
 			isa = PBXFileReference;
 			lastKnownFileType = text.plist.xml;
 			name = "Info-App.plist";
 			path = "Info-App.plist";
-			sourceTree = "SOURCE_ROOT";
-		};
-		B643D57236B194D62EB1CE41 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.cpp;
-			name = FilePanel.cpp;
-			path = ../../Source/FilePanel.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		B7F2238ECB262463A258393B = {
@@ -423,6 +471,13 @@
 			path = System/Library/Frameworks/AudioToolbox.framework;
 			sourceTree = SDKROOT;
 		};
+		BF69078A74741F065832028F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = ManualControl.h;
+			path = ../../Source/ManualControl.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		BFA4DD210B19A2604B0037F3 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
@@ -436,6 +491,13 @@
 			name = CoreMIDI.framework;
 			path = System/Library/Frameworks/CoreMIDI.framework;
 			sourceTree = SDKROOT;
+		};
+		CC5BA1B1A3AE3E5EA9AAFCAB = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = FileButtons.cpp;
+			path = ../../Source/FileButtons.cpp;
+			sourceTree = "SOURCE_ROOT";
 		};
 		D387044D26CE7F1CC5FB64A7 = {
 			isa = PBXFileReference;
@@ -451,11 +513,39 @@
 			path = ../../Source/MainComponent.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
+		DEB02C73EEB55A0E32154885 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = PathButtons.cpp;
+			path = ../../Source/PathButtons.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		E13E811E0DDA1AF59222AFB4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = RotationButtons.h;
+			path = ../../Source/RotationButtons.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		EDCBB6E54F7A756A13F86660 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
 			name = "include_juce_cryptography.mm";
 			path = "../../JuceLibraryCode/include_juce_cryptography.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		EE9F3BDE048298CBBFAA32A0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = PathButtons.h;
+			path = ../../Source/PathButtons.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		F0B3EDF75E2D672E4625068C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MapComponent.cpp;
+			path = ../../Source/MapComponent.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		F34D882B33CCC933588F3BF4 = {
@@ -505,8 +595,20 @@
 		D0D27BFC24008A167A76C55D = {
 			isa = PBXGroup;
 			children = (
-				B643D57236B194D62EB1CE41,
-				50D72C3C8DBD162415AD4E2A,
+				F0B3EDF75E2D672E4625068C,
+				58D6877BE2B1035C9C864C7E,
+				1C4012DF762541C653403A34,
+				E13E811E0DDA1AF59222AFB4,
+				7B40257CA468C4B45C9C4CEC,
+				0E86428221603729534360D7,
+				CC5BA1B1A3AE3E5EA9AAFCAB,
+				0D0BAD9EBE261685A83A0E6E,
+				5EDD04D890E00364AB0BBC0C,
+				BF69078A74741F065832028F,
+				DEB02C73EEB55A0E32154885,
+				EE9F3BDE048298CBBFAA32A0,
+				39F83D41D93CCD15A14AE9A6,
+				AB2E0BC07B2D90897E98F8E4,
 			);
 			name = "Manual Control";
 			sourceTree = "<group>";
@@ -515,8 +617,6 @@
 			isa = PBXGroup;
 			children = (
 				D0D27BFC24008A167A76C55D,
-				7B40257CA468C4B45C9C4CEC,
-				0E86428221603729534360D7,
 				A877BE9D824FCDCD87F73630,
 				2A2A69B010BD26BE80011DBD,
 				29CEF5621526457DAF46BC90,
@@ -849,8 +949,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2293CC75845D2CCE50C676B8,
-				9B8912E4E352EB0FCDEA0223,
+				7812C145BE1EBCE39150219B,
+				333038F184220F9EDFA461DA,
 				7A214010D3E9B74137300067,
+				AD0742E2ECD37CCB26FA500E,
+				5D386FF45A3A53BA65C2F1DC,
+				E75FCD7695B083EE84983E69,
+				90DC302E15B4E54B629AC855,
 				8556483C53993F8E4D114B7C,
 				A47C170CA784302913361357,
 				C70EAC7317EB6FA4535A8B93,

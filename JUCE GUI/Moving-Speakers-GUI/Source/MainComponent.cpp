@@ -39,7 +39,7 @@ void MainComponent::paint (Graphics& g)
 
 	addAndMakeVisible(_logComponent);
 	addAndMakeVisible(_tabsComponent);
-	addAndMakeVisible(_gridComponent);
+	addAndMakeVisible(_manualControl);
 }
 
 void MainComponent::resized()
@@ -49,7 +49,7 @@ void MainComponent::resized()
 
 	grid.templateRows = {Track(30_px), Track(3_fr), Track(1_fr)};
 	grid.templateColumns = {Track(1_fr)};
-	grid.items = {GridItem(_tabsComponent), GridItem(_gridComponent), GridItem(_logComponent)};
+	grid.items = {GridItem(_tabsComponent), GridItem(_manualControl), GridItem(_logComponent)};
 	grid.performLayout(getLocalBounds());
 
 }

@@ -3,12 +3,24 @@
 <JUCERPROJECT id="nq3hBm" name="Moving-Speakers-GUI" projectType="guiapp" jucerVersion="5.4.7">
   <MAINGROUP id="QcUkDh" name="Moving-Speakers-GUI">
     <GROUP id="{5C9B4581-255D-3259-6EA1-F215ADCC8E3B}" name="Source">
-      <GROUP id="{EE2AA553-5B17-E516-52BE-8D82D8D4B452}" name="Util">
+      <GROUP id="{EE2AA553-5B17-E516-52BE-8D82D8D4B452}" name="Midi">
+        <FILE id="HrcpzF" name="MidiController.cpp" compile="1" resource="0"
+              file="Source/MidiController.cpp"/>
+        <FILE id="Kl1krD" name="MidiController.h" compile="0" resource="0"
+              file="Source/MidiController.h"/>
         <FILE id="WSCkp1" name="MidiSettings.cpp" compile="1" resource="0"
               file="Source/MidiSettings.cpp"/>
         <FILE id="dxNawJ" name="MidiSettings.h" compile="0" resource="0" file="Source/MidiSettings.h"/>
       </GROUP>
       <GROUP id="{62FA6BFF-8C52-5DAF-61DD-2143AA85F673}" name="Ui">
+        <FILE id="Wsy7QV" name="MidiInputDeviceSelectorComponent.cpp" compile="1"
+              resource="0" file="Source/MidiInputDeviceSelectorComponent.cpp"/>
+        <FILE id="uMuAhB" name="MidiInputDeviceSelectorComponent.h" compile="0"
+              resource="0" file="Source/MidiInputDeviceSelectorComponent.h"/>
+        <FILE id="uFKJok" name="MidiOutputDeviceSelectorComponent.cpp" compile="1"
+              resource="0" file="Source/MidiOutputDeviceSelectorComponent.cpp"/>
+        <FILE id="lJ6amw" name="MidiOutputDeviceSelectorComponent.h" compile="0"
+              resource="0" file="Source/MidiOutputDeviceSelectorComponent.h"/>
         <FILE id="JKBL70" name="TabsComponent.cpp" compile="1" resource="0"
               file="Source/TabsComponent.cpp"/>
         <FILE id="en5AGm" name="TabsComponent.h" compile="0" resource="0" file="Source/TabsComponent.h"/>

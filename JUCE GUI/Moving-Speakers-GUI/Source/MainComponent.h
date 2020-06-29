@@ -37,12 +37,12 @@ private:
     // Your private member variables go here...
 
     LogComponent	_logComponent;
-    TabsComponent	_tabsComponent;
+    TabsComponent*	_tabsComponent;
 	rdd::MidiSettings	_midiSettings;
 	rdd::MidiController* _midiController;
 
-	MidiInputDeviceSelectorComponent _midiInputComponent;
-	MidiOutputDeviceSelectorComponent _midiOutputComponent;
+	//MidiInputDeviceSelectorComponent _midiInputComponent;
+	//MidiOutputDeviceSelectorComponent _midiOutputComponent;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

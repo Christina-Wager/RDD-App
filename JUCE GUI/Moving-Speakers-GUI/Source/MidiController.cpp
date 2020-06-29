@@ -15,6 +15,7 @@
 using namespace rdd;
 
 MidiController::MidiController(const MidiSettings& settings) {
+	_loggingEnabled = false;
 	reconfigure(settings);
 }
 
@@ -26,6 +27,12 @@ MidiController::~MidiController() {
 
 void MidiController::reconfigure(const MidiSettings& settings) {
 	_midiSettings = settings;
+}
+
+
+
+void MidiController::enableLogging(bool enable) {
+	_loggingEnabled = enable;
 }
 
 
@@ -63,7 +70,7 @@ bool MidiController::removeMidiInput(String midiInputIdentifier) {
 
 bool MidiController::addMidiOuput(String midiOutputIdentifier) {
 
-	for (size_t i = 0; _midiOutputs.size(); i++) {
+	for (size_t i = 0; i < _midiOutputs.size(); i++) {
 		if (_midiOutputs[i]->getIdentifier() == midiOutputIdentifier)
 			return false;
 	}
@@ -102,6 +109,11 @@ void MidiController::startCommand(MidiSettings::BotCommand cmd, uint8 velocity) 
 	for (size_t i = 0; i < _midiOutputs.size(); i++) {
 		_midiOutputs[i]->sendMessageNow(m);
 	}
+
+	if (_loggingEnabled) {
+		sprintf(_logMsg, "Midi Send: NoteOn(%d,%d,%d)", m.getChannel(), m.getNoteNumber(), velocity);
+		Logger::writeToLog(_logMsg);
+	}
 }
 
 
@@ -112,6 +124,11 @@ void MidiController::stopCommand(MidiSettings::BotCommand cmd) {
 	for (size_t i = 0; i < _midiOutputs.size(); i++) {
 		_midiOutputs[i]->sendMessageNow(m);
 	}
+
+	if (_loggingEnabled) {
+		sprintf(_logMsg, "Midi Send: NoteOff(%d,%d,0)", m.getChannel(), m.getNoteNumber());
+		Logger::writeToLog(_logMsg);
+	}
 }
 
 
@@ -120,6 +137,11 @@ void MidiController::sendParameter(MidiSettings::BotParameter param, uint8 value
 
 	for (size_t i = 0; i < _midiOutputs.size(); i++) {
 		_midiOutputs[i]->sendMessageNow(m);
+	}
+
+	if (_loggingEnabled) {
+		sprintf(_logMsg, "Midi Send: CC(%d,%d,%d)", m.getChannel(), m.getControllerNumber(), value);
+		Logger::writeToLog(_logMsg);
 	}
 }
 
@@ -136,14 +158,17 @@ void MidiController::changeListenerCallback(ChangeBroadcaster* source) {
 	auto midiInSelector = dynamic_cast<MidiInputDeviceSelectorComponent*>(source);
 
 	if (midiInSelector) {
+		
+		for (std::set<String>::iterator it = _midiInputIdentifiers.begin(); it != _midiInputIdentifiers.end(); it++) {
+			_deviceManager.removeMidiInputCallback(*it, this);
+		}
+		_midiInputIdentifiers.clear();
+
+
 		auto selectedInputs = midiInSelector->getSelectedDeviceIdentifiers();
 
-		for (auto id : _midiInputIdentifiers) {
-			removeMidiInput(id);
-		}
-
-		for (auto id : selectedInputs) {
-			addMidiInput(id);
+		for (std::set<String>::iterator it = selectedInputs.begin(); it != selectedInputs.end(); it++) {
+			addMidiInput(*it);
 		}
 
 		return;
@@ -161,8 +186,8 @@ void MidiController::changeListenerCallback(ChangeBroadcaster* source) {
 
 		_midiOutputs.clear();
 
-		for (auto id : selectedOutputs) {
-			addMidiOuput(id);
+		for (std::set<String>::iterator it = selectedOutputs.begin(); it != selectedOutputs.end(); it++) {
+			addMidiOuput(*it);
 		}
 
 

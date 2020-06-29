@@ -54,6 +54,11 @@ MidiOutputDeviceSelectorComponent::~MidiOutputDeviceSelectorComponent()
 
 
     //[Destructor]. You can add your own custom destruction code here..
+
+	// delete buttons
+	for (std::map<String, ToggleButton*>::iterator it = _buttons.begin(); it != _buttons.end(); it++) {
+		delete it->second;
+	}
     //[/Destructor]
 }
 

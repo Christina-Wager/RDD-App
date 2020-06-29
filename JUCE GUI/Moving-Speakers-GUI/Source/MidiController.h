@@ -29,6 +29,8 @@ namespace rdd {
 
 		void reconfigure(const MidiSettings& settings);
 
+		void enableLogging(bool enable);
+
 		bool addMidiInput(String midiInputIdentifier);
 		bool removeMidiInput(String midiInputIdentifier);
 		
@@ -55,6 +57,9 @@ namespace rdd {
 
 		std::set<String> _midiInputIdentifiers;
 		std::vector<std::unique_ptr<MidiOutput>> _midiOutputs;
+
+		bool _loggingEnabled;
+		char _logMsg[32];
 
 	};
 }

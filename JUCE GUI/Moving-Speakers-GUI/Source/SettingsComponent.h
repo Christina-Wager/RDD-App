@@ -20,8 +20,10 @@
 #pragma once
 
 //[Headers]     -- You can add your own extra header files here --
-#include "../JuceLibraryCode/JuceHeader.h"
+#include <JuceHeader.h>
 #include "MidiController.h"
+#include "MidiInputDeviceSelectorComponent.h"
+#include "MidiOutputDeviceSelectorComponent.h"
 //[/Headers]
 
 
@@ -34,12 +36,12 @@
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
-class TabsComponent  : public Component
+class SettingsComponent  : public Component
 {
 public:
     //==============================================================================
-    TabsComponent (rdd::MidiController* controller);
-    ~TabsComponent() override;
+    SettingsComponent (rdd::MidiController* controller);
+    ~SettingsComponent() override;
 
     //==============================================================================
     //[UserMethods]     -- You can add your own custom methods in this section.
@@ -53,14 +55,15 @@ public:
 private:
     //[UserVariables]   -- You can add your own custom variables in this section.
 	rdd::MidiController* _midiController;
+	MidiInputDeviceSelectorComponent _midiInputComponent;
+	MidiOutputDeviceSelectorComponent _midiOutputComponent;
     //[/UserVariables]
 
     //==============================================================================
-    std::unique_ptr<TabbedComponent> tabbedComponent;
 
 
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (TabsComponent)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SettingsComponent)
 };
 
 //[EndFile] You can add extra defines here...

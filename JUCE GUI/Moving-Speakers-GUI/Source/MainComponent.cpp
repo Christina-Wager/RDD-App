@@ -11,9 +11,6 @@
 //==============================================================================
 MainComponent::MainComponent()
 {
-    setSize (900, 400);
-
-	Logger::setCurrentLogger(&_logComponent);
 
 	File midiSettingsFile(File::getCurrentWorkingDirectory().getChildFile("../../midiconfig.json"));
 
@@ -25,15 +22,26 @@ MainComponent::MainComponent()
 		// init midi controller
 		_midiController = new rdd::MidiController(_midiSettings);
 
-		// let the midi controller listen for changes in the midiIO UI components
-		_midiInputComponent.addChangeListener(_midiController);
-		_midiOutputComponent.addChangeListener(_midiController);
+		_tabsComponent = new TabsComponent(_midiController);
 
+		Logger::setCurrentLogger(&_logComponent);
+
+		
+
+		setSize(1600, 900);
+
+		// let the midi controller listen for changes in the midiIO UI components
+		//_midiInputComponent.addChangeListener(_midiController);
+		//_midiOutputComponent.addChangeListener(_midiController);
+
+
+		// enable or disable logging of Midi message sending/receiving
+		_midiController->enableLogging(true);
 
 		// now you could send commands to all the selected outputs, e.g.
-		// _midiController->startCommand(MidiSettings::ROTATE_LEFT, 127);
-		// _midiController->stopCommand(MidiSettings::ROTATE_LEFT);
-		// _midiController->sendParameter(MidiSettings::MOVE_SPEED, 60)
+		 _midiController->startCommand(rdd::MidiSettings::ROTATE_LEFT, 127);
+		 _midiController->stopCommand(rdd::MidiSettings::ROTATE_LEFT);
+		 _midiController->sendParameter(rdd::MidiSettings::MOVE_SPEED, 60);
 
 
 	}
@@ -48,6 +56,8 @@ MainComponent::MainComponent()
 MainComponent::~MainComponent()
 {
 	Logger::setCurrentLogger(nullptr);
+	delete _tabsComponent;
+	delete _midiController;
 }
 
 //==============================================================================
@@ -60,11 +70,9 @@ void MainComponent::paint (Graphics& g)
     //g.setColour (Colours::white);
     //g.drawText ("Hello World!", getLocalBounds(), Justification::centred, true);
     
-    
-	addAndMakeVisible(_logComponent);
+
 	addAndMakeVisible(_tabsComponent);
-	addAndMakeVisible(_midiInputComponent);
-	addAndMakeVisible(_midiOutputComponent);
+	addAndMakeVisible(_logComponent);
 }
 
 void MainComponent::resized()
@@ -73,28 +81,22 @@ void MainComponent::resized()
     // If you add any child components, this is where you should
     // update their positions.
 
-	FlexBox fb2;
-	fb2.flexDirection = FlexBox::Direction::row;
-	fb2.flexWrap = FlexBox::Wrap::noWrap;
-	fb2.justifyContent = FlexBox::JustifyContent::center;
-	fb2.alignContent = FlexBox::AlignContent::stretch;
-	fb2.alignItems = FlexBox::AlignItems::stretch;
 
-	fb2.items.add(FlexItem(300, 300, _tabsComponent));
-	fb2.items.add(FlexItem(300, 300, _midiInputComponent));
-	fb2.items.add(FlexItem(300, 300, _midiOutputComponent));
+	auto area = getLocalBounds();
+
+	_logComponent.setBounds(area.removeFromBottom(300));
+	_tabsComponent->setBounds(area);
 
     
-    FlexBox fb;
-	fb.flexDirection = FlexBox::Direction::column;
-	fb.flexWrap = FlexBox::Wrap::noWrap;
-	fb.justifyContent = FlexBox::JustifyContent::center;
-	fb.alignContent = FlexBox::AlignContent::stretch;
-	fb.alignItems = FlexBox::AlignItems::stretch;
+ //   FlexBox fb;
+	//fb.flexDirection = FlexBox::Direction::column;
+	//fb.flexWrap = FlexBox::Wrap::noWrap;
+	//fb.justifyContent = FlexBox::JustifyContent::center;
+	//fb.alignContent = FlexBox::AlignContent::stretch;
+	//fb.alignItems = FlexBox::AlignItems::stretch;
 
-	fb.items.add(FlexItem(900, 300, fb2).withFlex(0.9f, 1.1f, 1.0f));
-	fb.items.add(FlexItem(900, 100, _logComponent));
-	
-	fb.performLayout(getLocalBounds().toFloat());
-	fb2.performLayout(getLocalBounds().toFloat());
+	//fb.items.add(FlexItem(900, 300, *_tabsComponent).withFlex(0.9f, 1.1f, 1.0f));
+	//fb.items.add(FlexItem(900, 100, _logComponent));
+	//
+	//fb.performLayout(getLocalBounds().toFloat());
 }

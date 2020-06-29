@@ -13,6 +13,10 @@
         <FILE id="dxNawJ" name="MidiSettings.h" compile="0" resource="0" file="Source/MidiSettings.h"/>
       </GROUP>
       <GROUP id="{62FA6BFF-8C52-5DAF-61DD-2143AA85F673}" name="Ui">
+        <FILE id="GJNO3r" name="SettingsComponent.cpp" compile="1" resource="0"
+              file="Source/SettingsComponent.cpp"/>
+        <FILE id="oZkmoh" name="SettingsComponent.h" compile="0" resource="0"
+              file="Source/SettingsComponent.h"/>
         <FILE id="Wsy7QV" name="MidiInputDeviceSelectorComponent.cpp" compile="1"
               resource="0" file="Source/MidiInputDeviceSelectorComponent.cpp"/>
         <FILE id="uMuAhB" name="MidiInputDeviceSelectorComponent.h" compile="0"

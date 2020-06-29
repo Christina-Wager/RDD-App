@@ -190,13 +190,6 @@ void MidiController::changeListenerCallback(ChangeBroadcaster* source) {
 			addMidiOuput(*it);
 		}
 
-
-		startCommand(MidiSettings::ROTATE_LEFT, 127);
-
-		stopCommand(MidiSettings::ROTATE_LEFT);
-
-		sendParameter(MidiSettings::SPEAKER_SPEED, 40);
-
 		return;
 	}
 

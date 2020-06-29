@@ -35,13 +35,13 @@ MainComponent::MainComponent()
 		//_midiOutputComponent.addChangeListener(_midiController);
 
 
-		// enable or disable logging of Midi message sending/receiving
+		// enable or disable(default) logging of Midi message sending/receiving
 		_midiController->enableLogging(true);
 
 		// now you could send commands to all the selected outputs, e.g.
-		 _midiController->startCommand(rdd::MidiSettings::ROTATE_LEFT, 127);
-		 _midiController->stopCommand(rdd::MidiSettings::ROTATE_LEFT);
-		 _midiController->sendParameter(rdd::MidiSettings::MOVE_SPEED, 60);
+		 //_midiController->startCommand(rdd::MidiSettings::ROTATE_LEFT, 127);
+		 //_midiController->stopCommand(rdd::MidiSettings::ROTATE_LEFT);
+		 //_midiController->sendParameter(rdd::MidiSettings::MOVE_SPEED, 60);
 
 
 	}

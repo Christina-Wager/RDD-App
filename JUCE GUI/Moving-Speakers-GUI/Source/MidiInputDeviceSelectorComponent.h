@@ -20,8 +20,8 @@
 #pragma once
 
 //[Headers]     -- You can add your own extra header files here --
-#include "../JuceLibraryCode/JuceHeader.h"
-#include "MidiController.h"
+#include <JuceHeader.h>
+#include <set>
 //[/Headers]
 
 
@@ -34,15 +34,19 @@
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
-class TabsComponent  : public Component
+class MidiInputDeviceSelectorComponent  : public Component,
+                                          public ChangeBroadcaster
 {
 public:
     //==============================================================================
-    TabsComponent (rdd::MidiController* controller);
-    ~TabsComponent() override;
+    MidiInputDeviceSelectorComponent ();
+    ~MidiInputDeviceSelectorComponent() override;
 
     //==============================================================================
     //[UserMethods]     -- You can add your own custom methods in this section.
+    void refreshDeviceList();
+	void onDeviceButtonToggled(String identifier);
+	const std::set<String>& getSelectedDeviceIdentifiers();
     //[/UserMethods]
 
     void paint (Graphics& g) override;
@@ -52,15 +56,20 @@ public:
 
 private:
     //[UserVariables]   -- You can add your own custom variables in this section.
-	rdd::MidiController* _midiController;
+
+	AudioDeviceManager _deviceManager;
+	std::set<String> _selectedDeviceIdentifiers;
+	std::map<String, ToggleButton*> _buttons;
+	Label _label{ {}, "Select MIDI input device(s)" };
+
+
     //[/UserVariables]
 
     //==============================================================================
-    std::unique_ptr<TabbedComponent> tabbedComponent;
 
 
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (TabsComponent)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MidiInputDeviceSelectorComponent)
 };
 
 //[EndFile] You can add extra defines here...

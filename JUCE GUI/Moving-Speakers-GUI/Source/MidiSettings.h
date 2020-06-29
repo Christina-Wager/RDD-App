@@ -46,11 +46,11 @@ namespace rdd {
 
 		bool load(const File& file);
 
-		int getChannel();
+		int getChannel() { return _channel; }
 
-		int getNote(BotCommand cmd);
+		inline int getNote(BotCommand cmd) { return _notes.find(cmd)->second; }
 
-		int getCC(BotParameter param);
+		inline int getCC(BotParameter param) { return _cc.find(param)->second; }
 
 		String toString();
 

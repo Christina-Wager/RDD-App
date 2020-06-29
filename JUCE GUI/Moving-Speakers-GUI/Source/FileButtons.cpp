@@ -1,4 +1,24 @@
+/*
+  ==============================================================================
 
+  This is an automatically generated GUI class created by the Projucer!
+
+  Be careful when adding custom code to these files, as only the code within
+  the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
+  and re-saved.
+
+  Created with Projucer version: 5.4.7
+
+  ------------------------------------------------------------------------------
+
+  The Projucer is part of the JUCE library.
+  Copyright (c) 2017 - ROLI Ltd.
+
+  ==============================================================================
+*/
+
+//[Headers] You can add your own extra header files here...
+//[/Headers]
 
 #include "FileButtons.h"
 
@@ -16,13 +36,15 @@ FileButtons::FileButtons ()
     //[UserPreSize]
     //[/UserPreSize]
 
+    setSize (600, 400);
+
+
+    //[Constructor] You can add your own custom stuff here..
     addAndMakeVisible(fileButtonsArr.add(new TextButton("Save")));
     addAndMakeVisible(fileButtonsArr.add(new TextButton("Load")));
     addAndMakeVisible(fileButtonsArr.add(new TextButton("Import")));
     addAndMakeVisible(fileButtonsArr.add(new TextButton("Export")));
 
-
-    //[Constructor] You can add your own custom stuff here..
     //[/Constructor]
 }
 
@@ -43,6 +65,7 @@ void FileButtons::paint (Graphics& g)
     //[UserPrePaint] Add your own custom painting code here..
     //[/UserPrePaint]
 
+    g.fillAll (Colour (0xff323e44));
 
     //[UserPaint] Add your own custom painting code here..
     //[/UserPaint]
@@ -51,8 +74,7 @@ void FileButtons::paint (Graphics& g)
 void FileButtons::resized()
 {
     //[UserPreResize] Add your own custom resize code here..
-    //[/UserPreResize]
-FlexBox fb;
+    FlexBox fb;
     fb.flexWrap = FlexBox::Wrap::wrap;
     fb.justifyContent = FlexBox::JustifyContent::center;
     fb.alignContent = FlexBox::AlignContent::center;
@@ -61,6 +83,10 @@ FlexBox fb;
         fb.items.add(FlexItem(*b).withMinWidth(60.0f).withMinHeight(40.0f));
 
     fb.performLayout(getLocalBounds().toFloat());
+
+
+    //[/UserPreResize]
+
     //[UserResized] Add your own custom resize handling here..
     //[/UserResized]
 }

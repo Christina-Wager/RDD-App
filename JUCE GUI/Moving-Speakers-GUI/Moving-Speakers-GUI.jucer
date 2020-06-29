@@ -17,9 +17,6 @@
                 file="Source/RotationButtons.cpp"/>
           <FILE id="eemEbS" name="RotationButtons.h" compile="0" resource="0"
                 file="Source/RotationButtons.h"/>
-          <FILE id="PPPa6c" name="GridComponent.cpp" compile="1" resource="0"
-                file="Source/GridComponent.cpp"/>
-          <FILE id="OP0bKf" name="GridComponent.h" compile="0" resource="0" file="Source/GridComponent.h"/>
           <FILE id="qgU5GT" name="FileButtons.cpp" compile="1" resource="0" file="Source/FileButtons.cpp"/>
           <FILE id="RFJaj8" name="FileButtons.h" compile="0" resource="0" file="Source/FileButtons.h"/>
           <FILE id="fm1PSh" name="ManualControl.cpp" compile="1" resource="0"

@@ -1,0 +1,14 @@
+<DEMO_TABLE_DATA>
+    <COLUMNS>
+        <COLUMN columnId="1" name="StepNr" width="50"/>
+        <COLUMN columnId="2" name="Sequence" width="250"/>
+        <COLUMN columnId="3" name="Length" width="100"/>
+    </COLUMNS>
+    <DATA>
+        <ITEM StepNr="01" Sequence="Sample Movement" Length="00:10"/>
+        <ITEM StepNr="02" Sequence="Another Sample Movement" Length="00:45"/>
+        <ITEM StepNr="03" Sequence="You can edit the description cells" Length="01:33"/>
+        <ITEM StepNr="04" Sequence="For testing purposes only" Length="00:51"/>
+        <ITEM StepNr="05" Sequence="Will be replaced later" Length="01:20"/>
+    </DATA>
+</DEMO_TABLE_DATA>
